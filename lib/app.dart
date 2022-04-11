@@ -36,6 +36,87 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("NAK"),
         ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Palette.nakRed,
+                ),
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Image.asset(
+                        "assets/img/nak-emblem.png",
+                        height: 100.0,
+                      ),
+                    ),
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "Welcome",
+                        style: TextStyle(
+                          color: Palette.nakWhite,
+                          fontSize: 18,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.holiday_village),
+                title: const Text('Chapters'),
+                onTap: () {
+                  // Update the state of the app.
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.attach_money),
+                title: const Text('Dues'),
+                onTap: () {
+                  // Update the state of the app.
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.groups),
+                title: const Text('National Board'),
+                onTap: () {
+                  // Update the state of the app.
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.shopping_cart),
+                title: const Text('NAKstore'),
+                onTap: () {
+                  // Update the state of the app.
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.groups),
+                title: const Text('Alumni'),
+                onTap: () {
+                  // Update the state of the app.
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.public),
+                title: const Text('Website'),
+                onTap: () {
+                  // Update the state of the app.
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
         bottomNavigationBar: menu(),
         body: TabBarView(
           children: <Widget>[

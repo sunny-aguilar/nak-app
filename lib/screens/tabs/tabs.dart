@@ -1,43 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:nak_app/models/palette.dart';
 
 Widget homeTab() {
   return Column(
     mainAxisAlignment: MainAxisAlignment.start,
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
-      Spacer(),
-      const Text(
-        "Welcome to the official website for Nu Alpha Kappa Fraternity, Inc.",
-        textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 24, fontFamily: "TrajanPro"),
+      const SizedBox(
+        height: 50.0,
       ),
-      Spacer(),
-      Container(
-        child: const Text(
-          "Welcome to the official website for Nu Alpha Kappa Fraternity, Inc.",
-          style: TextStyle(
-              fontSize: 24,
-              fontFamily: "TrajanPro",
-              fontWeight: FontWeight.bold),
+      Image.asset(
+        "assets/img/nak-letters.png",
+      ),
+      const SizedBox(
+        height: 30.0,
+      ),
+      const Text(
+        "Welcome to the official App for Nu Alpha Kappa Fraternity, Inc.",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Palette.nakRed,
+          fontSize: 24,
+          fontFamily: "TrajanPro",
+          fontWeight: FontWeight.bold,
         ),
       ),
-      Spacer(),
-      Container(
-        child: const Text(
-            "Welcome to the official website for Nu Alpha Kappa Fraternity, Inc."),
-      ),
+      const Spacer(),
     ],
   );
 }
 
 Widget resourcesTab() {
-  return Container(
-    child: Icon(Icons.home),
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: const <Widget>[
+      Text(
+        "Resources",
+        style: TextStyle(
+          fontSize: 24,
+        ),
+      ),
+    ],
   );
 }
 
 Widget contactUsTab() {
-  return Container(
-    child: Icon(Icons.home),
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: const <Widget>[
+      Text(
+        "Contact Form",
+        style: TextStyle(
+          fontSize: 24,
+        ),
+      ),
+    ],
   );
 }
