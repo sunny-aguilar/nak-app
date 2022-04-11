@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'models/palette.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'NAK',
       theme: ThemeData(
         // primarySwatch: Colors.blue,
-        primarySwatch: Palette.nakColors,
+        primarySwatch: Palette.nakRed,
       ),
       home: const MyHomePage(title: 'NAK'),
     );
@@ -54,7 +54,7 @@ Widget bottomNav() {
       BottomNavigationBarItem(
         icon: Icon(Icons.home),
         label: "Home",
-        backgroundColor: Palette.nakColors,
+        backgroundColor: Palette.nakRed,
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.policy),
