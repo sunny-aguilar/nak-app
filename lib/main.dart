@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'models/palette.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,56 +15,55 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NAK',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.blue,
+        primarySwatch: Palette.nakColors,
       ),
       home: const MyHomePage(title: 'NAK'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
+class MyHomePage extends StatelessWidget {
   final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  const MyHomePage({Key? key, this.title = 'NAK'}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(title),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+          children: const <Widget>[
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              'Child text in column in body',
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      bottomNavigationBar: bottomNav(),
     );
   }
+}
+
+Widget bottomNav() {
+  return BottomNavigationBar(
+    items: const <BottomNavigationBarItem>[
+      BottomNavigationBarItem(
+        icon: Icon(Icons.home),
+        label: "Home",
+        backgroundColor: Palette.nakColors,
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.policy),
+        label: "Resources",
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.email),
+        label: "Contact",
+      ),
+    ],
+  );
 }

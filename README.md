@@ -1,6 +1,6 @@
-# nak_app
+# The Official NAK App
 
-A new Flutter project.
+This is the official app by Nu Alpha Kappa Fraternity, Inc. 
 
 ## Getting Started
 
