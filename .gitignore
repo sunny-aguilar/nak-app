@@ -1,3 +1,14 @@
+# ignored files and folders
+ios
+android
+test
+web
+windows
+.metadata
+pubspec.lock
+analysis_options.yaml
+
+
 # Miscellaneous
 *.class
 *.log
