@@ -18,32 +18,32 @@ class App extends StatelessWidget {
         // primarySwatch: Colors.blue,
         primarySwatch: Palette.nakRed,
       ),
-      home: const MyHomePage(title: 'NAK'),
+      // home: const MyHomePage(title: 'NAK'),
+      home: const HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({Key? key, this.title = 'NAK'}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'Child text in column in body',
-            ),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("NAK"),
+        ),
+        bottomNavigationBar: menu(),
+        body: TabBarView(
+          children: <Widget>[
+            Container(child: Icon(Icons.home)),
+            Container(child: Icon(Icons.policy)),
+            Container(child: Icon(Icons.email)),
           ],
         ),
       ),
-      bottomNavigationBar: bottomNav(),
     );
   }
 }
@@ -65,5 +65,31 @@ Widget bottomNav() {
         label: "Contact",
       ),
     ],
+  );
+}
+
+Widget menu() {
+  return Container(
+    color: Palette.nakRed,
+    child: const TabBar(
+      indicatorSize: TabBarIndicatorSize.tab,
+      // indicatorPadding: EdgeInsets.all(5.0),
+      indicatorColor: Palette.nakWhite,
+      indicatorWeight: 2,
+      tabs: [
+        Tab(
+          text: "Home",
+          icon: Icon(Icons.home),
+        ),
+        Tab(
+          text: "Resources",
+          icon: Icon(Icons.policy),
+        ),
+        Tab(
+          text: "Contact Us",
+          icon: Icon(Icons.email),
+        ),
+      ],
+    ),
   );
 }
