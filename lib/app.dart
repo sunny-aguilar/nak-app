@@ -14,19 +14,20 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'NAK',
+      title: "NAK",
       theme: ThemeData(
         // primarySwatch: Colors.blue,
         primarySwatch: Palette.nakRed,
       ),
       // home: const MyHomePage(title: 'NAK'),
-      home: const HomePage(),
+      home: const HomePage(title: "NAK"),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final String title;
+  const HomePage({Key? key, this.title = "NAK"}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("NAK"),
+          title: Text(title),
         ),
         drawer: Drawer(
           child: ListView(
