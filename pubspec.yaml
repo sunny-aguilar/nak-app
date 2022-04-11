@@ -23,11 +23,11 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: TrajanPro
+      fonts:
+        - asset: assets/fonts/TrajanPro-Regular.ttf
+        - asset: assets/fonts/TrajanPro-Bold.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
