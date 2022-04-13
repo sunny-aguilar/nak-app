@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'models/palette.dart';
 import 'screens/tabs/tabs.dart' as tabs;
+import 'screens/chapters.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -8,6 +9,10 @@ class App extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final routes = {
+      ChaptersScreen.route: (context) => const ChaptersScreen(),
+    };
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "NAK",
@@ -17,6 +22,7 @@ class App extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'NAK'),
       home: const HomePage(title: "NAK"),
+      routes: routes,
     );
   }
 }
