@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nak_app/models/palette.dart';
 
 class AppDrawer extends StatelessWidget {
-  final title;
-  final body;
+  final String title;
+  final Widget body;
   const AppDrawer({Key? key, required this.title, required this.body})
       : super(key: key);
 
@@ -13,8 +13,9 @@ class AppDrawer extends StatelessWidget {
       length: 3,
       child: Scaffold(
         drawer: drawer(context),
-        appBar: AppBar(title: title),
+        appBar: AppBar(title: Text(title)),
         body: body,
+        bottomNavigationBar: bottomNavBar(),
       ),
     );
   }
@@ -98,6 +99,32 @@ Widget drawer(BuildContext context) {
             // Update the state of the app.
             Navigator.pop(context);
           },
+        ),
+      ],
+    ),
+  );
+}
+
+Widget bottomNavBar() {
+  return Container(
+    color: Palette.nakRed,
+    child: const TabBar(
+      indicatorSize: TabBarIndicatorSize.tab,
+      // indicatorPadding: EdgeInsets.all(5.0),
+      indicatorColor: Palette.nakWhite,
+      indicatorWeight: 2,
+      tabs: [
+        Tab(
+          text: "Home",
+          icon: Icon(Icons.home),
+        ),
+        Tab(
+          text: "Resources",
+          icon: Icon(Icons.policy),
+        ),
+        Tab(
+          text: "Contact Us",
+          icon: Icon(Icons.email),
         ),
       ],
     ),
