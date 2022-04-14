@@ -21,15 +21,6 @@ class AppDrawer extends StatelessWidget {
       "body": body,
     };
     return getScaffold(scaffoldValues);
-    // return DefaultTabController(
-    //   length: 3,
-    //   child: Scaffold(
-    //     drawer: drawer(context),
-    //     appBar: AppBar(title: Text(title)),
-    //     body: body,
-    //     bottomNavigationBar: bottomNavBar(),
-    //   ),
-    // );
   }
 }
 
