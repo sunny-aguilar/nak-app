@@ -7,7 +7,7 @@ windows
 .metadata
 pubspec.lock
 analysis_options.yaml
-
+.vscode
 
 # Miscellaneous
 *.class
