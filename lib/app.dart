@@ -14,7 +14,9 @@ class App extends StatelessWidget {
 
     final routes = {
       HomeScreen.route: (context) => const HomeScreen(title: appTitle),
-      ChaptersScreen.route: (context) => const ChaptersScreen(),
+      ChaptersScreen.route: (context) => const ChaptersScreen(
+            title: appTitle,
+          ),
     };
 
     return MaterialApp(

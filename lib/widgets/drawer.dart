@@ -57,7 +57,7 @@ Widget drawer(BuildContext context) {
           title: const Text('Chapters'),
           onTap: () {
             // Update the state of the app.
-            Navigator.pop(context);
+            Navigator.pushNamed(context, "/chapters");
           },
         ),
         ListTile(
