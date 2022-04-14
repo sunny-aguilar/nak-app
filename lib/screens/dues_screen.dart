@@ -5,10 +5,13 @@ class DuesScreen extends StatelessWidget {
   final String title;
   const DuesScreen({Key? key, required this.title}) : super(key: key);
 
+  static const route = '/dues';
+
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
       title: title,
+      bottomAppBar: false,
       body: duesScreen(),
     );
   }

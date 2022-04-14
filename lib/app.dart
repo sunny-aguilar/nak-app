@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'models/palette.dart';
-import 'screens/tabs/tabs.dart' as tabs;
 import 'screens/home_screen.dart';
 import 'screens/chapters.dart';
+import 'screens/dues_screen.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -17,6 +17,7 @@ class App extends StatelessWidget {
       ChaptersScreen.route: (context) => const ChaptersScreen(
             title: appTitle,
           ),
+      DuesScreen.route: (context) => const DuesScreen(title: appTitle),
     };
 
     return MaterialApp(

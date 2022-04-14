@@ -3,20 +3,54 @@ import 'package:nak_app/models/palette.dart';
 
 class AppDrawer extends StatelessWidget {
   final String title;
+  final bool bottomAppBar;
   final Widget body;
-  const AppDrawer({Key? key, required this.title, required this.body})
-      : super(key: key);
+  const AppDrawer({
+    Key? key,
+    required this.title,
+    required this.bottomAppBar,
+    required this.body,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var scaffoldValues = {
+      "context": context,
+      "title": title,
+      "appBar": bottomAppBar,
+      "body": body,
+    };
+    return getScaffold(scaffoldValues);
+    // return DefaultTabController(
+    //   length: 3,
+    //   child: Scaffold(
+    //     drawer: drawer(context),
+    //     appBar: AppBar(title: Text(title)),
+    //     body: body,
+    //     bottomNavigationBar: bottomNavBar(),
+    //   ),
+    // );
+  }
+}
+
+Widget getScaffold(Map scaffoldValues) {
+  if (scaffoldValues["appBar"] == true) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        drawer: drawer(context),
-        appBar: AppBar(title: Text(title)),
-        body: body,
+        drawer: drawer(scaffoldValues["context"]),
+        appBar: AppBar(
+          title: Text(scaffoldValues["title"]),
+        ),
+        body: scaffoldValues["body"],
         bottomNavigationBar: bottomNavBar(),
       ),
+    );
+  } else {
+    return Scaffold(
+      drawer: drawer(scaffoldValues["context"]),
+      appBar: AppBar(title: Text(scaffoldValues["title"])),
+      body: scaffoldValues["body"],
     );
   }
 }
@@ -65,7 +99,7 @@ Widget drawer(BuildContext context) {
           title: const Text('Dues'),
           onTap: () {
             // Update the state of the app.
-            Navigator.pop(context);
+            Navigator.pushNamed(context, "/dues");
           },
         ),
         ListTile(

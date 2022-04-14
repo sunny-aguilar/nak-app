@@ -11,6 +11,7 @@ class ChaptersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: title,
+      bottomAppBar: false,
       body: chaptersScreen(),
     );
   }
