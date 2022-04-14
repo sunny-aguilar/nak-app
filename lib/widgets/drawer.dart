@@ -42,7 +42,7 @@ Widget getScaffold(Map scaffoldValues) {
       drawer: drawer(scaffoldValues["context"]),
       appBar: AppBar(
         leading: (ModalRoute.of(scaffoldValues["context"])?.canPop ?? false)
-            ? BackButton()
+            ? const BackButton()
             : null,
         title: Text(scaffoldValues["title"]),
       ),
@@ -60,7 +60,7 @@ Widget drawer(BuildContext context) {
           decoration: const BoxDecoration(
             color: Palette.nakRed,
           ),
-          child: Stack(
+          child: Row(
             children: <Widget>[
               Align(
                 alignment: Alignment.centerLeft,
@@ -69,13 +69,15 @@ Widget drawer(BuildContext context) {
                   height: 100.0,
                 ),
               ),
-              const Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "Welcome",
-                  style: TextStyle(
-                    color: Palette.nakWhite,
-                    fontSize: 18,
+              const Flexible(
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    "Nu Alpha Kappa Fraternity, Inc.",
+                    style: TextStyle(
+                      color: Palette.nakWhite,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               )
