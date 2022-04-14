@@ -40,7 +40,12 @@ Widget getScaffold(Map scaffoldValues) {
   } else {
     return Scaffold(
       drawer: drawer(scaffoldValues["context"]),
-      appBar: AppBar(title: Text(scaffoldValues["title"])),
+      appBar: AppBar(
+        leading: (ModalRoute.of(scaffoldValues["context"])?.canPop ?? false)
+            ? BackButton()
+            : null,
+        title: Text(scaffoldValues["title"]),
+      ),
       body: scaffoldValues["body"],
     );
   }
@@ -83,6 +88,7 @@ Widget drawer(BuildContext context) {
           onTap: () {
             // Update the state of the app.
             Navigator.pushNamed(context, "/chapters");
+            // Navigator.pop(context);
           },
         ),
         ListTile(
