@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'models/palette.dart';
 import 'screens/home_screen.dart';
-import 'screens/chapters.dart';
+import 'screens/chapters_screen.dart';
 import 'screens/dues_screen.dart';
 
 class App extends StatelessWidget {
