@@ -12,15 +12,21 @@ class ChaptersScreen extends StatelessWidget {
     return AppScaffold(
       title: title,
       bottomAppBar: false,
-      body: chaptersScreen(),
+      body: chaptersScreen(context),
     );
   }
 }
 
-Widget chaptersScreen() {
-  return Column(
-    children: const <Widget>[
-      Text("Chapters Screen"),
-    ],
+Widget chaptersScreen(BuildContext context) {
+  final List<String> items;
+  items = List<String>.generate(20, (i) => 'Item $i');
+
+  return ListView.builder(
+    itemCount: items.length,
+    itemBuilder: (context, index) {
+      return ListTile(
+        title: Text(items[index]),
+      );
+    },
   );
 }
