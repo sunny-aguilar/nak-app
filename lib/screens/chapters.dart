@@ -19,7 +19,7 @@ class ChaptersScreen extends StatelessWidget {
 
 Widget chaptersScreen(BuildContext context) {
   final List<String> items;
-  items = List<String>.generate(20, (i) => 'Item $i');
+  items = List<String>.generate(20, (i) => 'Chapter $i');
 
   return ListView.builder(
     itemCount: items.length,
