@@ -4,48 +4,46 @@ import 'package:flutter/services.dart';
 import 'package:nak_app/widgets/app_scaffold.dart';
 import 'package:nak_app/models/chapters.dart';
 
-class ChaptersScreen extends StatelessWidget {
+class ChaptersScreen extends StatefulWidget {
   final String title;
   const ChaptersScreen({Key? key, required this.title}) : super(key: key);
 
   static const route = '/chapters';
 
   @override
-  Widget build(BuildContext context) {
-    return AppScaffold(
-      title: title,
-      bottomAppBar: false,
-      body: chaptersScreen(context),
-    );
-  }
+  State<ChaptersScreen> createState() => _ChaptersScreenState();
 }
 
-Widget chaptersScreen(BuildContext context) {
-  loadJSON();
-  final List<String> items;
-  items = List<String>.generate(20, (i) => 'Chapter $i');
-
-  return ListView.builder(
-    itemCount: items.length,
-    itemBuilder: (context, index) {
-      return ListTile(
-        title: Text(items[index]),
-      );
-    },
-  );
-}
-
-void loadJSON() {
+class _ChaptersScreenState extends State<ChaptersScreen> {
   List _chapters = [];
   Future<void> readJson() async {
     final String response =
         await rootBundle.loadString("assets/json/chapters.json");
     final data = await json.decode(response);
-    _chapters = data["chapters"];
-    print(_chapters);
+    setState(() {
+      _chapters = data["chapters"];
+    });
+    // print(_chapters[0]["name"]);
   }
 
-  _chapters
+  @override
+  Widget build(BuildContext context) {
+    readJson();
+    return AppScaffold(
+      title: widget.title,
+      bottomAppBar: false,
+      body: chaptersScreen(context, _chapters),
+    );
+  }
+}
 
-  readJson();
+Widget chaptersScreen(BuildContext context, _chapters) {
+  return ListView.builder(
+    itemCount: _chapters.length,
+    itemBuilder: (context, index) {
+      return ListTile(
+        title: Text(_chapters[index]["name"]),
+      );
+    },
+  );
 }
