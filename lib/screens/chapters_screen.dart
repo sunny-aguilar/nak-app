@@ -50,8 +50,8 @@ Widget chaptersScreen(BuildContext context, _chapters) {
         child: ListTile(
           // leading: FlutterLogo(size: 6.0),
           leading: Image.asset(
-            "assets/img/chapters/0${index}.png",
-            width: 50.0,
+            "assets/img/chapters/$index.png",
+            width: 60.0,
           ),
           title: Text(_chapters[index]["name"]),
           subtitle: Text(_chapters[index]["established"]),

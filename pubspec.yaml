@@ -24,7 +24,33 @@ flutter:
     - assets/img/nak-letters.png
     - assets/img/nak-emblem.png
     - assets/json/chapters.json
-    - assets/img/chapters
+    - assets/img/chapters/
+    # - assets/img/chapters/0.png
+    # - assets/img/chapters/1.png
+    # - assets/img/chapters/2.png
+    # - assets/img/chapters/3.png
+    # - assets/img/chapters/4.png
+    # - assets/img/chapters/5.png
+    # - assets/img/chapters/6.png
+    # - assets/img/chapters/7.png
+    # - assets/img/chapters/8.png
+    # - assets/img/chapters/9.png
+    # - assets/img/chapters/10.png
+    # - assets/img/chapters/11.png
+    # - assets/img/chapters/12.png
+    # - assets/img/chapters/13.png
+    # - assets/img/chapters/14.png
+    # - assets/img/chapters/15.png
+    # - assets/img/chapters/16.png
+    # - assets/img/chapters/17.png
+    # - assets/img/chapters/18.png
+    # - assets/img/chapters/19.png
+    # - assets/img/chapters/20.png
+    # - assets/img/chapters/21.png
+    # - assets/img/chapters/22.png
+    # - assets/img/chapters/23.png
+    # - assets/img/chapters/24.png
+    # - assets/img/chapters/25.png
 
   fonts:
     - family: TrajanPro
