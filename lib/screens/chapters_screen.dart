@@ -23,12 +23,17 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
     setState(() {
       _chapters = data["chapters"];
     });
-    // print(_chapters[0]["name"]);
+    print(_chapters[0]["name"]);
+  }
+
+  @override
+  void initState() {
+    readJson();
   }
 
   @override
   Widget build(BuildContext context) {
-    readJson();
+    // readJson();
     return AppScaffold(
       title: widget.title,
       bottomAppBar: false,
@@ -41,8 +46,16 @@ Widget chaptersScreen(BuildContext context, _chapters) {
   return ListView.builder(
     itemCount: _chapters.length,
     itemBuilder: (context, index) {
-      return ListTile(
-        title: Text(_chapters[index]["name"]),
+      return Card(
+        child: ListTile(
+          // leading: FlutterLogo(size: 6.0),
+          leading: Image.asset(
+            "assets/img/chapters/0${index}.png",
+            width: 50.0,
+          ),
+          title: Text(_chapters[index]["name"]),
+          subtitle: Text(_chapters[index]["established"]),
+        ),
       );
     },
   );

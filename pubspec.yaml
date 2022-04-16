@@ -24,6 +24,7 @@ flutter:
     - assets/img/nak-letters.png
     - assets/img/nak-emblem.png
     - assets/json/chapters.json
+    - assets/img/chapters
 
   fonts:
     - family: TrajanPro
