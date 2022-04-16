@@ -5,7 +5,7 @@
       "established": "february 26, 1988",
       "epoch": 572864400,
       "contact": "founding@nakinc.org"
-    }
+    },
     {
       "name": "alpha chapter",
       "established": "february 26, 1989",
@@ -129,43 +129,43 @@
     {
       "name": "phi chapter",
       "established": "november 12, 2011",
-      "epoch": ,
+      "epoch": 1321088400,
       "contact": "phi@nakinc.org"
     },
     {
       "name": "chi chapter",
       "established": "may 26, 2012",
-      "epoch": ,
+      "epoch": 1338019200,
       "contact": "chi@nakinc.org"
     },
     {
       "name": "psi chapter",
       "established": "august 17, 2012",
-      "epoch": ,
+      "epoch": 1345190400,
       "contact": "psi@nakinc.org"
     },
     {
       "name": "alpha alpha",
       "established": "december 6, 2014",
-      "epoch": ,
+      "epoch": 1417856400,
       "contact": "alphaalpha@nakinc.org"
     },
     {
       "name": "alpha beta chapter",
       "established": "december 14, 2014",
-      "epoch": ,
+      "epoch": 1418547600,
       "contact": "alphabeta@nakinc.org"
     },
     {
       "name": "alpha gamma chapter",
       "established": "may 6, 2017",
-      "epoch": ,
+      "epoch": 1494057600,
       "contact": "alphagamma@nakinc.org"
     },
     {
       "name": "alpha delta chapter",
       "established": "october 20, 2018",
-      "epoch": ,
+      "epoch": 1540022400,
       "contact": "alphadelta@nakinc.org"
     }
   ]
