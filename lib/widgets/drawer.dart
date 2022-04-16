@@ -131,12 +131,18 @@ Widget drawer(BuildContext context) {
           title: const Text('Website'),
           onTap: () {
             // Update the state of the app.
+            const String _url = "https://www.naknet.org";
+            _launchURL(_url);
             Navigator.pop(context);
           },
         ),
       ],
     ),
   );
+}
+
+void _launchURL(_url) async {
+  if (!await launch(_url)) throw 'Could not launch $_url';
 }
 
 Widget bottomNavBar() {
