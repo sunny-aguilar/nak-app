@@ -1,5 +1,6 @@
-import 'dart:io';
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:nak_app/widgets/app_scaffold.dart';
 import 'package:nak_app/models/chapters.dart';
 
@@ -20,10 +21,7 @@ class ChaptersScreen extends StatelessWidget {
 }
 
 Widget chaptersScreen(BuildContext context) {
-  var myFile = File("../models/chapters.json");
-  myFile.readAsString().then((String contents) {
-    print(contents);
-  });
+  loadJSON();
   final List<String> items;
   items = List<String>.generate(20, (i) => 'Chapter $i');
 
@@ -35,4 +33,19 @@ Widget chaptersScreen(BuildContext context) {
       );
     },
   );
+}
+
+void loadJSON() {
+  List _chapters = [];
+  Future<void> readJson() async {
+    final String response =
+        await rootBundle.loadString("assets/json/chapters.json");
+    final data = await json.decode(response);
+    _chapters = data["chapters"];
+    print(_chapters);
+  }
+
+  _chapters
+
+  readJson();
 }
