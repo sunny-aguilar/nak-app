@@ -54,7 +54,9 @@ Widget chaptersScreen(BuildContext context, _chapters) {
             width: 60.0,
           ),
           title: Text(_chapters[index]["name"]),
-          subtitle: Text(_chapters[index]["established"]),
+          subtitle: Text(
+              "Established: ${_chapters[index]["established"]}\ncontact: ${_chapters[index]["contact"]}"),
+          trailing: Icon(Icons.computer),
         ),
       );
     },
