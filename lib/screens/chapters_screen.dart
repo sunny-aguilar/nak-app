@@ -1,6 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:nak_app/widgets/app_scaffold.dart';
-import '';
+import 'package:nak_app/models/chapters.dart';
 
 class ChaptersScreen extends StatelessWidget {
   final String title;
@@ -19,6 +20,10 @@ class ChaptersScreen extends StatelessWidget {
 }
 
 Widget chaptersScreen(BuildContext context) {
+  var myFile = File("../models/chapters.json");
+  myFile.readAsString().then((String contents) {
+    print(contents);
+  });
   final List<String> items;
   items = List<String>.generate(20, (i) => 'Chapter $i');
 
