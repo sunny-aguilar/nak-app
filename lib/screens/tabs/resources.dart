@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class Resources extends StatefulWidget {
   const Resources({Key? key}) : super(key: key);
@@ -13,8 +14,19 @@ class _ResourcesState extends State<Resources> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        child: _buildPanel(),
+      child: Column(
+        children: <Widget>[
+          const Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Text(
+              "Nu Alpha Kappa remains committed to the well being of our members and the community as a whole. \n\nBrowse the Resources sub menu items for links to various resources.Your well being matters to us.",
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+          ),
+          _buildPanel(),
+        ],
       ),
     );
   }
@@ -35,13 +47,11 @@ class _ResourcesState extends State<Resources> {
           },
           body: ListTile(
               title: Text(item.expandedValue),
-              subtitle:
-                  const Text('To delete this panel, tap the trash can icon'),
-              trailing: const Icon(Icons.delete),
+              // subtitle:
+              //     const Text('To delete this panel, tap the trash can icon'),
+              // trailing: const Icon(Icons.delete),
               onTap: () {
-                setState(() {
-                  _data.removeWhere((Item currentItem) => item == currentItem);
-                });
+                setState(() {});
               }),
           isExpanded: item.isExpanded,
         );
@@ -51,15 +61,15 @@ class _ResourcesState extends State<Resources> {
 }
 
 class Item {
+  String expandedValue;
+  String headerValue;
+  bool isExpanded;
+
   Item({
     required this.expandedValue,
     required this.headerValue,
     this.isExpanded = false,
   });
-
-  String expandedValue;
-  String headerValue;
-  bool isExpanded;
 }
 
 List<Item> generateItems(int numberOfItems) {
@@ -73,10 +83,11 @@ List<Item> generateItems(int numberOfItems) {
     "Risk Management Education",
     "Sexual Misconduct Policy",
   ];
+
   return List<Item>.generate(numberOfItems, (int index) {
     return Item(
-      headerValue: "$title[index]",
-      expandedValue: 'This is item number $index',
+      headerValue: title[index],
+      expandedValue: policies[index],
     );
   });
 }

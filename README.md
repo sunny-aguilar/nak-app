@@ -1,6 +1,6 @@
 # The Official NAK App
 
-This is the official app by Nu Alpha Kappa Fraternity, Inc. 
+This is the official app by Nu Alpha Kappa Fraternity, Inc. Learn more about [Nu Alpha Kappa Fraternity, Inc.](https://www.naknet.org).
 
 ## Getting Started
 
