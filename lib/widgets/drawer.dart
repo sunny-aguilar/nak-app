@@ -99,7 +99,10 @@ Widget drawer(BuildContext context) {
           title: const Text('Dues'),
           onTap: () {
             // Update the state of the app.
-            Navigator.pushNamed(context, "/dues");
+            const String _url = "https://naknet.org/store/#!/Dues/c/72126034";
+            _launchURL(_url);
+            // Navigator.pushNamed(context, "/dues");
+            Navigator.pop(context);
           },
         ),
         ListTile(
@@ -116,6 +119,8 @@ Widget drawer(BuildContext context) {
           title: const Text('NAKstore'),
           onTap: () {
             // Update the state of the app.
+            const String _url = "https://shopnualphakappa.com/";
+            _launchURL(_url);
             Navigator.pop(context);
           },
         ),
@@ -124,6 +129,8 @@ Widget drawer(BuildContext context) {
           title: const Text('Alumni'),
           onTap: () {
             // Update the state of the app.
+            const String _url = "https://naknet.org/alumni/";
+            _launchURL(_url);
             Navigator.pop(context);
           },
         ),
@@ -132,7 +139,7 @@ Widget drawer(BuildContext context) {
           title: const Text('Website'),
           onTap: () {
             // Update the state of the app.
-            const String _url = "https://www.naknet.org";
+            const String _url = "https://naknet.org/";
             _launchURL(_url);
             Navigator.pop(context);
           },
