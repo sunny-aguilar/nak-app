@@ -40,3 +40,9 @@ Yes. There are many areas which require text updates and  those areas are the on
 ### How can I report a new bug?
 If you think you've found a bug, first read the ["Help I've Found a Bug"](https://www.browserstack.com/guide/how-to-write-a-bug-report) article and follow its instructions.
 If you're confident it's a new bug, go ahead and create a new GitHub issue. Be sure to include as much information as possible so that we can reproduce the bug. We have a pre-defined issue template to help you through this.
+
+### Community & Support
+- Visit [Nu Alpha Kappa Fraternity, Inc.](https://www.naknet.org)
+- Join [our Slack Channel](https://join.slack.com/t/nakinc/shared_invite/zt-fzcdjcbn-iYmtmAdZiK8df9wA6n6h8A)
+- Learn more about [Flutter](https://flutter.dev/)
+- Learn more about the [Dart programming language](https://dart.dev/)
