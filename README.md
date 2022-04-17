@@ -1,6 +1,7 @@
 # The Official NAK App
 
-This is the official app by Nu Alpha Kappa Fraternity, Inc. Learn more about [Nu Alpha Kappa Fraternity, Inc.](https://www.naknet.org).
+This is the official app by Nu Alpha Kappa Fraternity, Inc. Learn more about [Nu Alpha Kappa Fraternity, Inc.](https://www.naknet.org)
+This app is currently in the exploration phase and we would like to receive your feedback and suggestions.
 
 ## Getting Started
 
@@ -15,7 +16,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-# How To Contribute
+## How To Contribute
 - Fork the project repository
 - Clone your fork
 - Navigate to your local repository
