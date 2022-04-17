@@ -32,7 +32,10 @@ Widget getScaffold(Map scaffoldValues) {
       child: Scaffold(
         drawer: drawer(scaffoldValues["context"]),
         appBar: AppBar(
-          title: Text(scaffoldValues["title"]),
+          title: Text(
+            scaffoldValues["title"],
+            style: const TextStyle(fontFamily: "TrajanPro"),
+          ),
         ),
         body: scaffoldValues["body"],
         bottomNavigationBar: bottomNavBar(),
@@ -45,7 +48,10 @@ Widget getScaffold(Map scaffoldValues) {
         leading: (ModalRoute.of(scaffoldValues["context"])?.canPop ?? false)
             ? const BackButton()
             : null,
-        title: Text(scaffoldValues["title"]),
+        title: Text(
+          scaffoldValues["title"],
+          style: const TextStyle(fontFamily: "TrajanPro"),
+        ),
       ),
       body: scaffoldValues["body"],
     );
@@ -77,7 +83,8 @@ Widget drawer(BuildContext context) {
                     "Nu Alpha Kappa Fraternity, Inc.",
                     style: TextStyle(
                       color: Palette.nakWhite,
-                      fontSize: 20,
+                      fontFamily: "TrajanPro",
+                      fontSize: 19,
                     ),
                   ),
                 ),
