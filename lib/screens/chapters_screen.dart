@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nak_app/widgets/app_scaffold.dart';
-import 'package:nak_app/models/chapters.dart';
 
 class ChaptersScreen extends StatefulWidget {
   final String title;
@@ -23,11 +22,11 @@ class _ChaptersScreenState extends State<ChaptersScreen> {
     setState(() {
       _chapters = data["chapters"];
     });
-    print(_chapters[0]["name"]);
   }
 
   @override
   void initState() {
+    super.initState();
     readJson();
   }
 

@@ -1,0 +1,84 @@
+{
+  "board": [
+    {
+      "position": "National President",
+      "name": "Jose R. Lara",
+      "email": "president@nakinc.org"
+    },
+    {
+      "position": "VP of Business Ops",
+      "name": "Steven Valdez",
+      "email": "nvp-business@nakinc.org"
+    },
+    {
+      "position": "VP of Compliance",
+      "name": "Bryan Campos",
+      "email": "nvp-compliance.nakinc.org"
+    },
+    {
+      "position": "Secretary",
+      "name": "Vacant",
+      "email": "secretary@nakinc.org"
+    },
+    {
+      "position": "Treasury Controller",
+      "name": "Sandro Aguilar",
+      "email": "treasurer@nakinc.org"
+    },
+    {
+      "position": "Executive VP of Alumni Relations",
+      "name": "Sergio Beltran",
+      "email": "naa@nakinc.org"
+    },
+    {
+      "position": "VP of Northern Chapter Compliance",
+      "name": "Vacant",
+      "email": "north.chapterdev@nakinc.org"
+    },
+    {
+      "position": "VP of Marketing",
+      "name": "Diego Hurtado",
+      "email": "nakmarketing@nakinc.org"
+    },
+    {
+      "position": "VP of Northern Education",
+      "name": "Antonio Sanchez",
+      "email": "north.intake@nakinc.org"
+    },
+    {
+      "position": "VP of Southern Education",
+      "name": "Pedro Q. Valencia",
+      "email": "south.intake@nakinc.org"
+    },
+    {
+      "position": "VP of Programming",
+      "name": "Juan Aguilar",
+      "email": "programs@nakinc.org"
+    },
+    {
+      "position": "VP of Expansion & Recruitment",
+      "name": "Vacant",
+      "email": "expansion@nakinc.org"
+    },
+    {
+      "position": "VP of Campus & Public Relations",
+      "name": "Vacant",
+      "email": "publicrelations@nakinc.org"
+    },
+    {
+      "position": "VP of Communications",
+      "name": "Vacant",
+      "email": "communications@nakinc.org"
+    },
+    {
+      "position": "VP of Northern DEI",
+      "name": "Vacant",
+      "email": "avp-north-dei@nakinc.org"
+    },
+    {
+      "position": "VP of Sourthern DEI",
+      "name": "Armando Zaragoza",
+      "email": "abp-south-dei@nakinc.org"
+    }
+  ]
+}

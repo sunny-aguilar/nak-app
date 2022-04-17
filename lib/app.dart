@@ -3,6 +3,7 @@ import 'models/palette.dart';
 import 'screens/home_screen.dart';
 import 'screens/chapters_screen.dart';
 import 'screens/dues_screen.dart';
+import 'screens/national_board_screen.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class App extends StatelessWidget {
             title: appTitle,
           ),
       DuesScreen.route: (context) => const DuesScreen(title: appTitle),
+      NationalBoardScreen.route: (context) => const NationalBoardScreen(title: appTitle)
     };
 
     return MaterialApp(

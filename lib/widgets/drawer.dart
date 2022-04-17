@@ -106,8 +106,9 @@ Widget drawer(BuildContext context) {
           leading: const Icon(Icons.groups),
           title: const Text('National Board'),
           onTap: () {
-            // Update the state of the app.
-            Navigator.pop(context);
+            // Update the state of the app.dues
+            Navigator.pushNamed(context, "/board");
+            // Navigator.pop(context);
           },
         ),
         ListTile(
