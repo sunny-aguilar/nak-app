@@ -57,12 +57,8 @@ Widget nameTextField(nameController) {
   return TextFormField(
     controller: nameController,
     decoration: const InputDecoration(
-      // icon: Icon(Icons.person),
       hintText: "Enter your name",
       focusColor: Colors.red,
-      // border: OutlineInputBorder(
-      //   borderRadius: BorderRadius.circular(3.0),
-      // ),
     ),
     // The validator receives the text that the user has entered.
     validator: (value) {
@@ -78,7 +74,6 @@ Widget emailTextField(emailController) {
   return TextFormField(
     controller: emailController,
     decoration: const InputDecoration(
-      // icon: Icon(Icons.email),
       hintText: "Enter your email",
     ),
     // The validator receives the text that the user has entered.
@@ -96,7 +91,6 @@ Widget messageTextField(messageController) {
     controller: messageController,
     maxLines: 6,
     decoration: const InputDecoration(
-      // icon: Icon(Icons.sticky_note_2),
       hintText: "Enter yourmessage",
     ),
     // The validator receives the text that the user has entered.

@@ -100,21 +100,6 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(vertical: 8.0),
-          //   child: FlatButton(
-          //       onPressed: () {
-          //         setState(() {
-          //           _enabled = !_enabled;
-          //         });
-          //       },
-          //       child: Text(
-          //         _enabled ? 'Stop' : 'Play',
-          //         style: Theme.of(context).textTheme.button?.copyWith(
-          //             fontSize: 18.0,
-          //             color: _enabled ? Colors.redAccent : Colors.green),
-          //       )),
-          // )
         ],
       ),
     );
