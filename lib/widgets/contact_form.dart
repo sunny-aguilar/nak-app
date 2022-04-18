@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:nak_app/models/palette.dart';
+import 'package:nak_app/auth/secrets.dart';
 
 class ContactForm extends StatefulWidget {
   const ContactForm({Key? key}) : super(key: key);
@@ -22,28 +23,30 @@ class _ContactFormState extends State<ContactForm> {
   }
 
   Widget initScreen(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: Form(
-        key: _formKey,
-        child: Column(
-          children: <Widget>[
-            // Add TextFormFields and ElevatedButton here.
-            const Text("CONTACT US"),
-            nameTextField(nameController),
-            emailTextField(emailController),
-            messageTextField(messageController),
-            const SizedBox(
-              height: 20.0,
-            ),
-            submitButton(
-              context,
-              _formKey,
-              nameController,
-              emailController,
-              messageController,
-            )
-          ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              // Add TextFormFields and ElevatedButton here.
+              const Text("CONTACT US"),
+              nameTextField(nameController),
+              emailTextField(emailController),
+              messageTextField(messageController),
+              const SizedBox(
+                height: 20.0,
+              ),
+              submitButton(
+                context,
+                _formKey,
+                nameController,
+                emailController,
+                messageController,
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -133,11 +136,6 @@ Widget submitButton(
           nameController.clear();
           emailController.clear();
           messageController.clear();
-          // If the form is valid, display a snackbar. In the real world,
-          // you'd often call a server or save the information in a database.
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Processing Data')),
-          );
         }
       },
       child: RichText(
@@ -163,9 +161,9 @@ Widget submitButton(
 
 Future sendEmail(String name, String email, String message) async {
   final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-  const serviceId = 'service_zum49nw';
-  const templateId = 'template_ww9njjh';
-  const userId = 'G4tGyqwwq0P-XRPUI';
+  const serviceId = service_Id;
+  const templateId = template_Id;
+  const userId = user_Id;
   final response = await http.post(url,
       headers: {
         'Content-Type': 'application/json'

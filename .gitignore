@@ -1,3 +1,7 @@
+# my ignored files
+.gitignore
+lib/auth/secrets.dart
+
 # ignored files and folders
 ios
 android
