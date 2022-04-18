@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nak_app/models/palette.dart';
 import 'resources.dart';
+import 'contact_form.dart';
 
 Widget homeTab() {
   return Column(
@@ -32,30 +33,9 @@ Widget homeTab() {
 }
 
 Widget resourcesTab() {
-  // return Column(
-  //   mainAxisAlignment: MainAxisAlignment.center,
-  //   children: const <Widget>[
-  //     Text(
-  //       "Resources",
-  //       style: TextStyle(
-  //         fontSize: 24,
-  //       ),
-  //     ),
-  //   ],
-  // );
   return const Resources();
 }
 
 Widget contactUsTab() {
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: const <Widget>[
-      Text(
-        "Contact Form",
-        style: TextStyle(
-          fontSize: 24,
-        ),
-      ),
-    ],
-  );
+  return const ContactFormTab();
 }

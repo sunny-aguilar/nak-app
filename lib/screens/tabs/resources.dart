@@ -16,12 +16,14 @@ class _ResourcesState extends State<Resources> {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Text(
-              "Nu Alpha Kappa remains committed to the well being of our members and the community as a whole. \n\nBrowse the Resources sub menu items for links to various resources.Your well being matters to us.",
-              style: TextStyle(
-                fontSize: 18,
+          const Card(
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text(
+                "Nu Alpha Kappa remains committed to the well being of our members and the community as a whole. \n\nBrowse the Resources sub menu items for links to various resources.Your well being matters to us.",
+                style: TextStyle(
+                  fontSize: 18,
+                ),
               ),
             ),
           ),
