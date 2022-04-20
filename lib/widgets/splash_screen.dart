@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  bool _enabled = true;
+  final bool _enabled = true;
 
   @override
   void initState() {

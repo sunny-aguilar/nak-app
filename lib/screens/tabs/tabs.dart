@@ -13,16 +13,17 @@ Widget homeTab() {
       ),
       Image.asset(
         "assets/img/nak-letters.png",
+        height: 100,
       ),
       const SizedBox(
         height: 30.0,
       ),
       const Text(
-        "Welcome to the official App for Nu Alpha Kappa Fraternity, Inc.",
+        "Welcome",
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Palette.nakRed,
-          fontSize: 24,
+          fontSize: 32,
           fontFamily: "TrajanPro",
           fontWeight: FontWeight.bold,
         ),
