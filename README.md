@@ -1,5 +1,5 @@
 ![NAK Logo](https://naknet.org/main/wp-content/uploads/2012/04/Header_Stacked_1line.png)
-# The Official NAK App
+# The unOfficial NAK App
 
 This is the official app by Nu Alpha Kappa Fraternity, Inc. Learn more about [Nu Alpha Kappa Fraternity, Inc.](https://www.naknet.org)
 This app is currently in the exploration phase and we would like to receive your feedback and suggestions. The app is being worked on for both iOS and Android.
